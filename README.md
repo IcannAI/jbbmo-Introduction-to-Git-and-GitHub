@@ -16,98 +16,70 @@ Output
 _© 2022 XYZ, Inc._
 
 
-## 專案核心主題 (Core Topics)
-版本控制系統 (VCS)：學習 Git 的基礎邏輯。
+# Introduction to Git and GitHub - Git 與 GitHub 入門實驗室
 
-分散式工作流：理解本地儲存庫與遠端 (GitHub) 儲存庫的同步。
+這是 IBM 在 Coursera / edX 等平台上「Introduction to Git and GitHub」課程的配套實驗室儲存庫（Lab Repository）。  
+它並非一個完整的 Web 應用程式，而是一個專門設計給初學者的**教學實驗室**，目的是透過實際操作來掌握版本控制的核心概念與 GitHub 協作流程。
 
-分支管理 (Branching)：建立、切換分支以及處理合併 (Merge) 與衝突 (Conflict)。
+## 專案核心主題
 
-協作功能：Pull Requests (PR)、Forking 以及 Issue 追蹤。
-
-GitHub Pages：練習如何將靜態網頁部署至線上環境。
+- 版本控制系統 (VCS)：學習 Git 的基礎邏輯與運作原理
+- 分散式工作流：理解本地儲存庫 ↔ 遠端 GitHub 儲存庫的同步機制
+- 分支管理 (Branching)：建立、切換分支，處理合併 (Merge) 與衝突 (Conflict) 解決
+- 協作功能：Pull Requests (PR)、Forking 工作流、Issue 追蹤
+- GitHub Pages：練習將靜態網頁部署到線上環境
 
 ## 支援的 HTTP 方法與主要功能
-由於這是 Git 練習，它主要透過 Git 協定（底層封裝於 HTTPS 或 SSH）進行操作：
 
-GET：用於 git clone 或瀏覽 GitHub 網頁介面讀取原始碼。
+本專案並非 Web 應用，因此**沒有傳統的 HTTP API 路由**。  
+Git 的操作主要透過 Git 協定（底層使用 HTTPS 或 SSH）進行，映射到常見動作如下：
 
-POST/PUT：對應於 git push（將本地變更上傳至伺服器）或建立新的 Pull Request。
+- **GET**：對應 `git clone`、`git pull`、瀏覽 GitHub 網頁介面讀取檔案/歷史
+- **POST / PUT**：對應 `git push`（推送變更）、建立 Pull Request、更新遠端分支
+- **主要功能重點**：程式碼的版本追蹤、歷史記錄、分支合併、團隊協作同步，而非實作後端路由
 
-功能重點：並非實作 API 路由，而是實作 程式碼的版本追蹤與團隊同步。
+**典型 Git 工作流（本實驗室重點練習內容）**
 
-## Workflow (Git 工作流)
-Fork：將原始專案複製到自己的 GitHub 帳號下。
-
-Clone：將專案下載至本地環境。
-
-Branch：建立特徵分支 (Feature Branch) 進行修改。
-
-Stage & Commit：將修改標記並存入本地紀錄。
-
-Push：將更動推送回雲端。
-
-Pull Request：請求將變更合併回主幹。
+1. Fork → 將課程專案複製到自己帳號
+2. Clone → 下載到本地
+3. Branch → 建立特徵分支進行修改
+4. Stage & Commit → 標記變更並建立提交紀錄
+5. Push → 推送至遠端
+6. Pull Request → 提出合併請求
 
 ## API 路由總覽
-無內部 API 路由：本專案不包含 Express 或 Flask 等後端路由。
 
-外部 API 應用：實作中會接觸到 GitHub 的 REST API 概念（例如當你透過介面點擊「Merge」時，實際上是觸發了 GitHub 的 API）。
+- **無內部 API 路由**：本專案不包含任何 Express、Flask 或其他後端框架的路由
+- **外部 API 概念**：透過 GitHub 網頁介面操作（如點擊 Merge、建立 Issue）時，實際上是呼叫 GitHub REST API，但初學者無需直接撰寫 API 呼叫
 
 ## 環境需求
-* Git Bash / Terminal：必備的命令列工具。
 
-* GitHub 帳號：用於練習遠端操作。
-
-* 文字編輯器：如 VS Code，用於修改練習用的 HTML/Markdown 檔案。
+- Git（命令列工具）：Windows → Git Bash / macOS & Linux → 內建 Terminal
+- GitHub 帳號（免費即可）
+- 文字編輯器：強烈推薦 **Visual Studio Code**（內建 Git 支援與 Live Server 擴充功能）
+- 瀏覽器：用於操作 GitHub 網頁介面與查看 GitHub Pages
 
 ## 複製專案 (Cloning)
-在終端機輸入：
 
-Bash
-```git clone https://github.com/[Username]/jbbmo-Introduction-to-Git-and-GitHub.git```
+### 先在 GitHub 上 Fork 本專案到你的帳號
+### 然後 Clone 你自己 Fork 的版本（請替換 Your_Username）
+```git clone https://github.com/Your_Username/jbbmo-Introduction-to-Git-and-GitHub.git```
 
-### Installation
-此專案不需要安裝特定的程式語言套件（如 npm install），它更像是一個文檔與腳本的集散地。主要的安裝步驟是 Git 的安裝與配置：
+```cd jbbmo-Introduction-to-Git-and-GitHub```
 
-Bash
-git config --global user.name "Name"
-git config --global user.email "xxx@email.com"
-#### 啟動開發伺服器
-#### 本專案通常不包含動態伺服器。
-#### 若包含簡單的 HTML，可使用 VS Code 的 Live Server 擴充功能預覽。
+## Installation
+### 本專案無需安裝任何套件（沒有 package.json 或 requirements.txt）。
+### 只需完成 Git 基本設定：
+```git config --global user.name "你的名字"```
+```git config --global user.email "你的email@example.com"```
 
-## Structure (專案結構)
-* README.md：實驗指南。
+### 啟動開發伺服器
 
-* sample_files/：供練習用的 HTML 或純文字檔。
+* 本專案沒有後端伺服器需要啟動
+* 包含 HTML/Markdown 檔案，可使用以下方式預覽：VS Code 安裝 Live Server 擴充功能 → 右鍵 HTML 檔案 → Open with Live Server
+或使用 Python 內建伺服器：
+```python -m http.server 8000```
+#### 然後瀏覽 http://localhost:8000
 
-* .git/（隱藏）：儲存所有版本歷史的核心目錄。
+## Structure
 
-## 應用方向
-* DevOps 基礎：所有 CI/CD 流程的起點。
-
-* 開源貢獻：學習如何參與開源社群。
-
-* 團隊協作標準：建立企業內部開發規範。
-
-## MVP 方向 
-* 自動化部署腳本：建立一個利用 Git Hooks 在 Push 時自動更新伺服器的 MVP。
-
-* 個人作品集平台：利用專案中提到的 GitHub Pages 技術，快速上線個人靜態網站。
-
-* 文件管理系統：利用 Git 的版本特性，管理法律合約或技術文件的修訂版本。
-
-## Tool (工具棧)
-* Git (核心工具)
-
-* GitHub (雲端平台)
-
-* Markdown (文件撰寫語言)
-
-## Key Takeaways
-* 錯誤不可怕：Git 的強大在於能夠隨時「回到過去」(Reset/Revert)。
-
-* 原子化提交 (Atomic Commits)：學會將小的改動分開 Commit，有助於除錯。
-
-* 協作邏輯：理解「先 Pull 後 Push」是避免衝突的黃金準則。
