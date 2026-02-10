@@ -1,5 +1,4 @@
 # Introduction to Git and GitHub - Git 與 GitHub 入門實驗室
-
 這是 IBM 在 Courseran Introduction to Git and GitHub課程的Lab Repository。  
 目的是透過實際操作來掌握版本控制的核心概念與 GitHub 協作流程。
 
@@ -62,34 +61,38 @@ Git 的操作主要透過 Git 協定（底層使用 HTTPS 或 SSH）進行，映
 
 ## Structure
 
-*README.md       # 實驗文件指南
-*instructions/   ＃ 各Lab的操作說明
-*sample_files/   ＃ 練習用的範例檔案（HTML、txt、md等）
-*.gitignore     ＃ 忽略不需提交的檔案
-*.git/           ＃（隱藏資料夾）Git 版本歷史核心
+- README.md       # 實驗文件指南
+
+- instructions/   ＃ 各Lab的操作說明
+
+- sample_files/   ＃ 練習用的範例檔案（HTML、txt、md等）
+
+- .gitignore     ＃ 忽略不需提交的檔案
+
+- .git/           ＃（隱藏資料夾）Git 版本歷史核心
 
 ## 應用方向
-DevOps 基礎：所有 CI/CD、自動化部署的起點
-開源貢獻：學習 Fork → PR → 參與開源專案的標準流程
-團隊協作規範：企業內部程式碼管理、文件版本控制標準
-**個人作品集與部落格：用GitHub Pages快速上線靜態網站**
+- DevOps 基礎：所有 CI/CD、自動化部署的起點
+- 開源貢獻：學習 Fork → PR → 參與開源專案的標準流程
+- 團隊協作規範：企業內部程式碼管理、文件版本控制標準
+- **個人作品集與部落格：用GitHub Pages快速上線靜態網站**
 
 ## MVP 方向 
 雖然本專案本身不是應用框架，但可發展：
-＊ 個人靜態作品集網站（GitHub Pages + 自訂域名）
-＊ 文件版本管理系統（合約、規格書、課程筆記的修訂歷史）
-＊ 自動化部署小工具（Git Hooks + 簡單腳本，在 push 時更新伺服器）
-＊ 團隊知識庫原型（Markdown 文件 + GitHub Wiki / Pages）
+- 個人靜態作品集網站（GitHub Pages + 自訂域名）
+- 文件版本管理系統（合約、規格書、課程筆記的修訂歷史）
+- 自動化部署小工具（Git Hooks + 簡單腳本，在 push 時更新伺服器）
+- 團隊知識庫原型（Markdown 文件 + GitHub Wiki / Pages）
 
 ## Tool 
-＊ Git：版本控制核心工具
-＊ GitHub：遠端託管、協作平台、Pages 靜態託管
-＊ Markdown：撰寫文件、README、課程筆記
-＊ VS Code：內建 Git 圖形介面、Live Server、Markdown 預覽
+- Git：版本控制核心工具
+- GitHub：遠端託管、協作平台、Pages 靜態託管
+- Markdown：撰寫文件、README、課程筆記
+- VS Code：內建 Git 圖形介面、Live Server、Markdown 預覽
 
 ## Key takeaways
-* Git 可隨時回到前一個版本（reset、revert、checkout）
-* 小的、單一目的的 commit 最容易追蹤與除錯
-* **協作黃金準則：先 pull / fetch 再 push，大幅降低衝突機率**
-* 分支是免費的：多用 feature branch，不怕把 main 搞壞
-* **版本控制**
+- Git 可隨時回到前一個版本（reset、revert、checkout）
+- 小的、單一目的的 commit 最容易追蹤與除錯
+- **協作黃金準則：先 pull / fetch 再 push，大幅降低衝突機率**
+- 分支是免費的：多用 feature branch，不怕把 main 搞壞
+- **版本控制**
