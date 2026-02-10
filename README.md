@@ -1,21 +1,3 @@
-# Introduction to Git and GitHub
-
-## Simple Interest Calculator
-
-A calculator that calculates simple interest given principal, annual rate of interest and time period in years.
-
-```
-Input:
-   p, principal amount
-   t, time period in years
-   r, annual rate of interest
-Output
-   simple interest = p*t*r
-```
-
-_© 2022 XYZ, Inc._
-
-
 # Introduction to Git and GitHub - Git 與 GitHub 入門實驗室
 
 這是 IBM 在 Courseran Introduction to Git and GitHub課程的Lab Repository。  
@@ -88,11 +70,10 @@ Git 的操作主要透過 Git 協定（底層使用 HTTPS 或 SSH）進行，映
 *.git/           ＃（隱藏資料夾）Git 版本歷史核心
 
 ## 應用方向
-
 DevOps 基礎：所有 CI/CD、自動化部署的起點
 開源貢獻：學習 Fork → PR → 參與開源專案的標準流程
 團隊協作規範：企業內部程式碼管理、文件版本控制標準
-個人作品集與部落格：使用 GitHub Pages 快速上線靜態網站
+**個人作品集與部落格：用GitHub Pages快速上線靜態網站**
 
 ## MVP 方向 
 雖然本專案本身不是應用框架，但可發展：
@@ -110,6 +91,6 @@ DevOps 基礎：所有 CI/CD、自動化部署的起點
 ## Key takeaways
 * Git 可隨時回到前一個版本（reset、revert、checkout）
 * 小的、單一目的的 commit 最容易追蹤與除錯
-＊ ＊＊協作黃金準則：先 pull / fetch 再 push，大幅降低衝突機率＊＊
-＊ 分支是免費的：多用 feature branch，不怕把 main 搞壞
-＊ ＊＊版本控制＊＊
+* **協作黃金準則：先 pull / fetch 再 push，大幅降低衝突機率**
+* 分支是免費的：多用 feature branch，不怕把 main 搞壞
+* **版本控制**
